@@ -20,6 +20,7 @@ Actual : 1hr
 
 # Introduction / Computer Science / Representation
 * a process of solving problem
+
 <img src='./images/chp_2.png'></img>
 
 * how you present input and output?
@@ -40,6 +41,7 @@ Actual : 1hr
 * it is just a power system of 10
 
 * then in computer system, they think like that.
+
 <img src='./images/chp_4.png'></img>
 
 * **BINARY** means somebody understanding information using 2 power system
