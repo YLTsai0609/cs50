@@ -1,210 +1,209 @@
 # Ref
-[Home page](https://cs50.harvard.edu/summer/2020/weeks/0/)
 
-[pdf](https://cdn.cs50.net/2019/fall/lectures/0/lecture0.pdf)
+start 0920
+end 2220
+course 30:00
+factor 4
 
+start 01:30
+end 02:20
+course 15.05
+factor 4
 
-start : 0530
-end : 0630
-read : 28 mins
+[TBC 45.05](https://video.cs50.io/e9Eds2Rc_x8?screen=ClQXfUurzgU&start=2706)
 
-start : 0530
-end : 0640
-read : 30 mins
+[Home page](https://cs50.harvard.edu/summer/2020/weeks/1/)
 
-Total : 2hr
-Actual : 1hr
+[pdf](https://cdn.cs50.net/2019/fall/lectures/1/lecture1.pdf)
 
-<img src='./images/chp_1.png'></img>
-* 2/3 never take cs lesson before, feel unsafe is ok 
+# C
 
-# Introduction / Computer Science / Representation
-* a process of solving problem
+* 傳統，古老，純粹基於文本
+* 他可以做所有Scratch做得到的，甚至做到更多，但是沒有什麼使用者有好性QQ
+* 你或許沒有經驗，但是其中2/3的人也都沒有
+* 雖然程式碼的長相不一樣，但是背後的觀念絕對是跟Scratch完全一模一樣
 
-<img src='./images/chp_2.png'></img>
+<img src='./images/chpC_1.png'></img>
 
-* how you present input and output?
-* more generally, how you present information?
+* 這堂課會帶給你一種MIT的Hacker精神，就像是被消防水柱炸臉一樣，帶給你的知識會比你能接收的還要多，但在課程結束後你會覺得非常值得
 
-## binary
-* **BINARY** - what computer prsent infomation
+<img src='./images/chpC_2.png'></img>
 
-## Numbers
-* count people in the room, perple use 單語言, 有就count 1, 沒有就沒有, 用手來比
+* actually the same
 
-* people could count, computer only get 0/1 - but they could present image, video, sound, and character!
+<img src='./images/chpC_3.png'></img>
 
-* `123` means 一百二十三 in our symbol - and we read in a way like below
+* for starting things
+* 右邊你可能目前還不知道在幹嘛，但是幾堂課之後你會逐漸了解
+* `printf` - print in format
+* using double quote to pack your string
+* when you finish your thought, add `;`
+* then, `printf("hello, world");`
+<img src='./images/chpC_4.png'></img>
 
-<img src='./images/chp_3.png'></img>
+* `include <studio.h>`
+* if you want to use some functionality, you need to tell the computer where is the function in. 
 
-* it is just a power system of 10
+# Env
 
-* then in computer system, they think like that.
+use : https://sandbox.cs50.io/
 
-<img src='./images/chp_4.png'></img>
+# name of the file
 
-* **BINARY** means somebody understanding information using 2 power system
+`.c` , just like `.docx` , `.gif`
+# Between code and binary - the compiler!
 
-<img src='./images/chp_5.png'></img>
+* computer desn't understand english, it understand binary!
+* our c code is not binary!, our code is a middle phase between engslih and something we can't tell.
 
-* we need more digit :P
-* the digit called **bit**
-* 1/0 on/off True/False could represnet the idea
+<img src='./images/chpC_5.png'></img>
 
-<img src='./images/chp_6.png'></img>
+* converting up to down, we need tools, actually, a algorithm!
 
-* bytes just 8 bits
+<img src='./images/chpC_6.png'></img>
 
-<img src='./images/chp_7.png'></img>
+* we gonna call it **compiler** !
+* actually relatively easy to do that
+* a program called `clang` , just some people write it, for converting source code c into machine code(binary!)
 
-* this is 50
-* 晶體管，裡面就是一大堆這種開關XD
-* 某個計算機為了表達50，就會在剛剛的這三個位置儲存一點電，那麼他就表達了50
-* 真的很好笑XD，互動的部分XD
+<img src='./images/chpC_7.png'></img>
 
-# What about text and sending email, compose document?
-## character
-* ok!, how computer represnet character?
+* when type `clang hello.c` , we have `a.out` , wtf!?
+* it is binary!(all about zero and one!)
 
-* represent as nunber XD
-* A - 1, B - 2, C - 3 ?
-* they have a dictionary!
-* this dictionary is ASCII  
+<img src='./images/chpC_8.png'></img>
 
-<img src='./images/chp_8.png'></img>
-<img src='./images/chp_9.png'></img>
-<img src='./images/chp_10.png'></img>
+<img src='./images/chpC_9.png'></img>
 
-* **ASCII** - American System Code II (美國訊息交換標準代碼)
-* well, again, just a well-defined map(dictionary)
+* 還真的是binary，還說無法顯示，靠腰XD
 
-<img src='./images/chp_11.png'></img>
+<img src='./images/chpC_10.png'></img>
 
-<img src='./images/chp_12.png'></img>
+* 告訴電腦說，在當前目錄執行 `a.out` 這個binary file，跟double click基本上是同一回事
 
-* if you want to say `HI!`
+<img src='./images/chpC_11.png'></img>
 
-<img src='./images/chp_13.png'></img>
+* 當我們在Scratch看到貓說hello world的時候我們非常興奮，但是在C語言中我們卻不為所動XD，這語言實在有點古老跟愚笨，連自己換行都不會，C，其他程式語言也是，基本上都只會去做你叫他做的事，不會做多的
 
-# All country around the world?
-## Unicode
-## and mow day emoji?
+QAs:
+could we rename `a.out` so that we could have different version? - yes we can.
 
-<img src='./images/chp_14.png'></img>
+<img src='./images/chpC_12.png'></img>
 
-<img src='./images/chp_15.png'></img>
+* 後面有星號的，綠色的，means machine code
 
-* They call it **Unicode**
-* again, well defined map(dictionary)
+``` BASH
+ls - list
+rm - remove
+mkdir - make directrory
+```
 
-* difference ascii use 8 bits, Unicode use 8/16/24/32 bits
+# hello John
 
-<img src='./images/chp_16.png'></img>
+second program
+ask -> get_string 
+<img src='./images/chpC_13.png'></img>
+<img src='./images/chpC_14.png'></img>
 
-* the most popular emoji sent on IOS to 2019
+* C is old school, you need to tell it how type you want to store
+* equal sign in computer science is typically a movement from right to left means assignment
+* how can I concat string? - placeholder
+* placeholder `%` , `%s` for given placeholder as a string
 
-<img src='./images/chp_17.png'></img>
+``` C
+string answer = get_string("enter your name\n");
+printf("hello, %s\n", answer) 
+```
 
-* tear smile emoji -> 128514, hahahahaha
-* in binary, `11111011000000010`
+* 雖然以上程式看起來很古怪且神奇，但是拿到同樣的程式碼時，你確實可以從右至左，從上至下，推論這一份程式碼想表達什麼
 
-<img src='./images/chp_18.png'></img>
+QAs :
 
-# Color? (yellow dots on emoji)
-## RGB
+1. could we use multiple placeholder in a string? - yes we can - like "hello %s, %s", string1, string2
+2. any other method to concat string? - short answer, yes, but not easy, by far, most easist way here is printf
+3. what is string? - zero or more chracter in double quote
+4. what will happend if `\n` outside the quote? - will cause error, clang will help us to find out
 
-* again, years ago, people in a room, you know what, we want to represent color but use `0, 1` only
+<img src='./images/chpC_15.png'></img>
 
-* if you sent a color point, you are actually sending 3 numbers
+* whole code like that
 
-<img src='./images/chp_19.png'></img>
+# Error Code
 
-<img src='./images/chp_20.png'></img>
+<img src='./images/chpC_16.png'></img>
 
-<img src='./images/chp_21.png'></img>
+* error are just computer got confused!
+* not your logical problem, be nice with computer
+* it doesn't know where the error is, then guessing correct code into incorrect code 
 
-# images / gif / video
+* then you got 4 error, we will scroll to the top, check the first, the following error maybe jsut phantom errors(幻影錯誤，也就是其實是不存在的錯誤) 
 
-<img src='./images/chp_22.png'></img>
+<img src='./images/chpC_17.png'></img>
 
-* basically N images, with a lot of degit point
+* computer starts to guessing what you wanna mean, it said stdin?, **No we want a string!**
+* actually, we will show you where you could use string, and what going on in computer when we call the string stuff.
+* Now, we have a file called `cs50.h` , there is a string!
+* `stdio.h` invented `printf` , `cs50.h` invented `string` and `get_string` !
+* so after our diagnosis, computer doesn't know what is string and get_string, because you only import `stdio.h` , they didn't invent these two stuff
 
+<img src='./images/chpC_18.png'></img>
 
-# what about music?
-## Sound
+* progress, but still a bug. but fewer!
+* link is just a command combining my code and cs50 code to one program which I can actually run.
 
-<img src='./images/chp_23.png'></img>
+ `clang -o string string.c -lcs50`
+* we need to remember all of this thing? too compilicated!
+* jusy use that `make string` : make me a program called string!
 
-* 音符 持續時間 音量
+``` BASH
+clang -fsanitize=signed-integer-overflow -fsanitize=undefined 
+-ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -W
+no-unused-parameter -Wno-unused-variable -Wshadow    string.c 
+ -lcrypt -lcs50 -lm -o string
+```
 
+<img src='./images/chpC_19.png'></img>
 
-<img src='./images/chp_24.png'></img>
+* all the output command is automatically generated for you, when you tell the computer, make my program
+* and a program **make** will figure out what parameters we need then do the compiling!
+* same thing, `make hello` also worked!
 
-# the black box
-## algorithms
+QAs:
 
-<img src='./images/chp_25.png'></img>
+1. make is a standard thing or cs50 specific? - standard
+2. hello is mechine code, hello.c is the source code, so make is a program make our life easier right? - yes!
 
-* a step by step maumal for solving problem
+   1. acutally when you `make abc` , it will find `abc.c` and decide all of the compiling parameters to compile it. otherwise it will failed
 
-## find a name in a phone book, well sorted
+3. make is originally from linux, then of course on MAC, recnetly on Windows
 
-<img src='./images/chp_26.png'></img>
+<img src='./images/chpC_19.png'></img>
 
-* binary search
+to be honest, no one will remember something code like that, it is too tedious! That's why such as a program `make` exist!
 
-<img src='./images/chp_27.png'></img>
+`make` and `clang` basically the same thing, solving source code to machine code!
 
-## Idea, psudo code, function, condition, boolean statement, and loop
-* when problem size getting bigger, solving time basically the same.
-* intutively, we get twice size bigger problem, we just one more step to solving probelm
+<img src='./images/chpC_20.png'></img>
 
-## (psudo code) Tansfer this idea into code
-* basically no standard format
-* use english, or your language, some number, to present your idea
+# number variable / add / syntax sugar
 
-<img src='./images/chp_28.png'></img>
+<img src='./images/chpC_21.png'></img>
 
-* it will translate into a language called `scratch`, `python`, `C`
-* the yello highlight word call `function`, it is a verb to do someting!
+* but this one doesn't need dtype
+* this line will assume the variable `counter` exist, so we do not specify the word int again
 
-<img src='./images/chp_29.png'></img>
+<img src='./images/chpC_22.png'></img>
 
-* Now another highlight word call `condition`
+<img src='./images/chpC_23.png'></img>
 
-<img src='./images/chp_30.png'></img>
+<img src='./images/chpC_24.png'></img>
 
-* The word highlight following condition is called `boolean statement`, just named by a mathmatician Bool
+* basically the same thing
+* two above in programming called `syntax sugar`
 
-<img src='./images/chp_31.png'></img>
+``` 
+syntax sugar
 
-* the word highlight is `loop`, which make things going again and again.
-
-<img src='./images/chp_32.png'></img>
-
-## Summary
-
-<img src='./images/chp_32.png'></img>
-
-## And More!
-
-<img src='./images/chp_33.png'></img>
-
-* we will use scratch which is develop by MIT lab
-
-## scratch
-
-<img src='./images/chp_33.png'></img>
-
-you could try it, it is very easy to use :P
-
-<img src='./images/chp_34.png'></img>
-
-<img src='./images/chp_35.png'></img>
-
-* Computer Science like start with zero because it means all the digits are off
-
-
-* computer can do parallelly, can listening a event
-* abstraction - make block as function
+it doesn't invent any new way to help you
+just make you use the way more easy and concise
+```
