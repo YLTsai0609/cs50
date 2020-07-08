@@ -1,17 +1,5 @@
 # Ref
 
-start 0920
-end 2220
-course 30:00
-factor 4
-
-start 01:30
-end 02:20
-course 15.05
-factor 4
-
-[TBC 45.05](https://video.cs50.io/e9Eds2Rc_x8?screen=ClQXfUurzgU&start=2706)
-
 [Home page](https://cs50.harvard.edu/summer/2020/weeks/1/)
 
 [pdf](https://cdn.cs50.net/2019/fall/lectures/1/lecture1.pdf)
@@ -207,3 +195,147 @@ syntax sugar
 it doesn't invent any new way to help you
 just make you use the way more easy and concise
 ```
+
+# Condition(boolean expression) / reconstruct your code
+
+<img src='./images/chpC_25.png'></img>
+
+* codition用小括號，what you want to do 用大括號
+
+<img src='./images/chpC_26.png'></img>
+
+* 只有兩個分號在這裡! 條件判斷的過程中並不使用分號，動作結束才需要
+
+<img src='./images/chpC_27.png'></img>
+
+* use double equal for mathematical equal
+* 這是早期寫code最容易犯的錯誤之一
+* muscle memory will increase over time you practice!
+
+<img src='./images/chpC_28.png'></img>
+
+* the next of weeks we will talk about different quality of codes
+
+# Loops (While / for )
+
+<img src='./images/chpC_29.png'></img>
+<img src='./images/chpC_30.png'></img>
+
+<img src='./images/chpC_31.png'></img>
+
+* the goto part is automatically generated in C
+
+<img src='./images/chpC_32.png'></img>
+
+<img src='./images/chpC_33.png'></img>
+
+# data types
+
+* dtypes
+
+<img src='./images/chpC_34.png'></img>
+
+* functions in cs50
+
+<img src='./images/chpC_35.png'></img>
+
+* placeholder
+
+<img src='./images/chpC_36.png'></img>
+
+# muscle memory!
+
+* open cs50 sandbox!
+
+<img src='./images/chpC_37.png'></img>
+
+* you need to deal with unexpected input!
+* in this case `get_int` , `get_string` hold by cs50 solving that.
+
+<img src='./images/chpC_38.png'></img>
+
+ `implicit declaration of function error`
+* C語言不僅很老，而且還很笨，他能夠辨識你寫的source code，但是只能**從上到下**，反過來寫是不行的，進入main之後找不到 `caugh` ，就會出現 `implicit declaration of function error`
+# Mario!
+
+<img src='./images/chpC_39.png'></img>
+
+* create question block in mario game
+
+<img src='./images/chpC_40.png'></img>
+
+* create two dimension block in mario game
+
+<img src='./images/chpC_40.png'></img>
+
+* they are typically the same!
+
+<img src='./images/chpC_41.png'></img>
+
+<img src='./images/chpC_42.png'></img>
+
+# memory(Limitation of computer)
+
+<img src='./images/chpC_43.png'></img>
+
+* all of your programs are stored while they're running.
+* all of your programs where all of your files are stored while they're opened.
+* But it is **finited**
+
+<img src='./images/chpC_44.png'></img>
+
+* lying programming?
+* who is right? grade school math or computers?
+* the computer only can store some digits, so after certian point, you don't know what's going on out there
+* if you only have finite hardware(like memory) - the computer has to decide : `I can count no giher than this value` , `I can store mo more than this many numbers after decimal point`
+* and float support `32 bits`
+* double support `64 bits`
+* **computer are indeed not perfect**
+
+* another case, **overflow**
+
+<img src='./images/chpC_45.png'></img>
+
+suppose you have only 3 digits
+
+<img src='./images/chpC_46.png'></img>
+
+* long time ago, human decide to design computer store as less as possible because space is expensive early on.
+* in mid 1900, there is a Y2K probelm
+
+<img src='./images/chpC_47.png'></img>
+
+* same stroy in 波音747
+* 持續供電248天，波音747即將在幾天後進入安全休眠模式，因為軟體產生的溢位(overflow)
+* in seconds, 248 days ~ $2^{32}$, means they only use 32 digits at that version
+
+# cool tools
+
+`figlet` - acsii art!
+`say` - say the word!
+
+# Stats
+
+start 0920
+end 2220
+course 30:00
+factor 4
+
+start 01:30
+end 02:20
+course 15.05
+factor 4
+
+start 1730
+end 1830
+course 15.05
+factor 4
+
+start 1245
+end 0134
+course 25
+factor 1.8
+
+start 1700
+end 1830
+factor 2
