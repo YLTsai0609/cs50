@@ -339,3 +339,7 @@ factor 1.8
 start 1700
 end 1830
 factor 2
+
+total  390 mins (6.5hr)
+
+course 120 mins (2hr)
