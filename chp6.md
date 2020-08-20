@@ -1,92 +1,85 @@
 # Ref
 
-[Home page](https://cs50.harvard.edu/summer/2020/weeks/7/)
+[Home page](https://cs50.harvard.edu/summer/2020/weeks/6/)
 
-[pdf](https://cdn.cs50.net/2019/fall/lectures/7/lecture7.pdf)
+[pdf](https://cdn.cs50.net/2019/fall/lectures/6/lecture6.pdf)
 
-# Week - 7 SQL
+# Week - 6 python
 
-Structure Query Language
+* we hope you have a ability to learn new language
 
-* an application to store data - database
-* start from survey
+* use scratch to mimic the program
 
-<img src='./images/sql_1.png'></img>
+# python
 
-* use dict(hash table) in python to count data with keys and values.
+* no more semicolomn
+* no more standio
+* no more type of variable
+* do the same thing but very simple
+* f-strnig
 
-* kinda of messy(tedious) code in python, in SQL
+# compiler
 
-# sqllite3
+ `python hello_world.py`
+source code -> your functionality
 
-<img src='./images/sql_2.png'></img>
+# implementation
 
-* command line tools for mini database
-* very useful if you just want to see some stats in command line enviroment
+<img src='./images/chp6_1.png'></img>
+<img src='./images/chp6_2.png'></img>
 
-# relational database
+* super easy. no need to free memory. powerful loop
 
-INSERT
-SELECT
-UPDATE
-DELETE
+* same program
 
-<img src='./images/sql_3.png'></img>
+<img src='./images/chp6_3.png'></img>
 
-# data type
+# python features vs C features
 
-* fancy new to call a new sheet!
-* the data type of sql 
-* BLOB
-  + (Binary Large Object)
-  + typically you won't use it, but if you want to store binary data, just use it.
-* INTEGER
-  + smallint
-  + intger
-  + bigint
-* NUMBERIC
-  + boolean
-  + date
-  + datetime
-  + numeric(scale, precision) - you can specify how may digits you want before the decimal point
-* REAL
-  + real
-  + double precision
-* TEXT
-  + char(n)
-  + varchar(n) - an upper bound of columns
-  + text
-* why when we use the web-based applicaiton, thr button not work suddenly? - becuase the backend is using SQL(they had to decide the max length of text of input, so when you put to much into the database, it will slow you down to avoid some kind of attack)
+* paid price, python is slower 1.45s vs 0.5s
+* if you're doing your homework. you don't care!
+* if you are searching million of people. if will take you more server for cost. you shoud use C!
+* `src6` C code vs python code 
+* is any thing in c could be done in python? - no, some language are build or better suited for certain domain.
+* for example, if you want to using C to build a web service you will be exhausted, but in python, ruby, Java, there are a lot of features to help you.
+* the fact is like language like python doesn't have pointer, because it is so easy to make a mistake of pointer
 
-# functions
+* no need to write a main funtion in python. you just start writing your code.
+* in python, no portotype, use a module instead.
+* Pythonic code - simple, but maybe the best idea to maintain.
+* there are no `++` operator in python
+* there are no `do while` syntax in python
+* default python using positional arguments and keyword arguments, C use positional arguments only
+* be carful about default argument
 
-* a lot, INSERT, SELECT, AVG, COUNT, DISTINCT, SUM, ... LIKE(very handing for matching)
+* input will always return `string`
+* overflow? - there is no upper bound in python numbers, some other guy deal with the problem
+* list - no more `malloc` and `realloc`
+* `for in` in Iterable
+* `argv` in `sys` -> `from sys import argv`
+* `exit` in `sys`
+* `if ... in` means a loop $O(N)$
+  + what is the time and space complexity in python syntax sugar? - you can read python documentation
+* `dictionary` - string abstraction with hash table 
+* `if ... in iterable` - worked in a dictionary.
+* double quote ans single quote are the same, can be use for both. in C, double for string, sinlge for char
+* python do strnig compare using `==` , C do that using `strcmp`
+* swap two values
 
-<img src='./images/sql_4.png'></img>
+`x, y = y, x` , in C, you need `*a, *b, tmp`
+75
 
-* `%` placeholder - means anything - %office% (blablabla**office**blablabla) 
-* WHERE, LIKE, LIMIT, GROUPBY, ORDER BY, JOIN, ...
+# Regular expression
 
-<img src='./images/sql_5.png'></img>
+* there is a feature C do not have, but in Python, Bash, Java, ... there is!
 
-<img src='./images/sql_6.png'></img>
+# AI
 
-* use sqlite3 to do data cleaning
+* using Google speech API and Google face API!
+* face recogntion
+* QR code - straight-forward loading link by QR Code!
 
-* most dangerous!!!
-
-<img src='./images/sql_7.png'></img>
-
-<img src='./images/sql_8.png'></img>
-
-* what's might it got? - there might be another tv shows containing `friends` but not `friends` , you can search on IMDB!
-
-# IMDB datasets
-
-* IMDB provide dataset as `TSV` file(Tab-Separated Values) - they decide use tab instead of comma to seperate the file
-
-IMDB : `https://www.imdb.com/`
-# Hands on command line SQL
+start @ 1:43:00
 
 # Stats
 
