@@ -140,6 +140,7 @@ alpha-beta 剪枝
 ```
 
 [從純文科生到軟體工程師之路（二）「你想學程式做什麼？」一個不簡單的問題，與我的答案 Alice Yang](https://crossing.cw.com.tw/amp/article/12689?fbclid=IwAR0qDK8DG_kJjPhd2G33OyRgsZxrL9k1_wr_ESZi6L7SkyZHWkdArORFiEE)
+
 [哈佛大學最「狂」的一門課──「如果你沒聽過 CS50，請別說你讀過哈佛」 Alice Yang](https://crossing.cw.com.tw/article/7200)
 
 ``` 
