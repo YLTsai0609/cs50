@@ -26,7 +26,8 @@
 * `printf` - print in format
 * using double quote to pack your string
 * when you finish your thought, add `;`
-* then, `printf("hello, world");`
+* then,  `printf("hello, world");`
+
 <img src='./images/chpC_4.png'></img>
 
 * `include <studio.h>`
@@ -39,6 +40,7 @@ use : https://sandbox.cs50.io/
 # name of the file
 
 `.c` , just like `.docx` , `.gif`
+
 # Between code and binary - the compiler!
 
 * computer desn't understand english, it understand binary!
@@ -96,7 +98,7 @@ ask -> get_string
 * C is old school, you need to tell it how type you want to store
 * equal sign in computer science is typically a movement from right to left means assignment
 * how can I concat string? - placeholder
-* placeholder `%` , `%s` for given placeholder as a string
+* placeholder `%` ,  `%s` for given placeholder as a string
 
 ``` C
 string answer = get_string("enter your name\n");
@@ -131,7 +133,7 @@ QAs :
 * computer starts to guessing what you wanna mean, it said stdin?, **No we want a string!**
 * actually, we will show you where you could use string, and what going on in computer when we call the string stuff.
 * Now, we have a file called `cs50.h` , there is a string!
-* `stdio.h` invented `printf` , `cs50.h` invented `string` and `get_string` !
+* `stdio.h` invented `printf` ,  `cs50.h` invented `string` and `get_string` !
 * so after our diagnosis, computer doesn't know what is string and get_string, because you only import `stdio.h` , they didn't invent these two stuff
 
 <img src='./images/chpC_18.png'></img>
@@ -140,6 +142,7 @@ QAs :
 * link is just a command combining my code and cs50 code to one program which I can actually run.
 
  `clang -o string string.c -lcs50`
+
 * we need to remember all of this thing? too compilicated!
 * jusy use that `make string` : make me a program called string!
 
@@ -154,7 +157,7 @@ no-unused-parameter -Wno-unused-variable -Wshadow    string.c
 
 * all the output command is automatically generated for you, when you tell the computer, make my program
 * and a program **make** will figure out what parameters we need then do the compiling!
-* same thing, `make hello` also worked!
+* same thing,  `make hello` also worked!
 
 QAs:
 
@@ -190,6 +193,7 @@ to be honest, no one will remember something code like that, it is too tedious! 
 * two above in programming called `syntax sugar`
 
 ``` 
+
 syntax sugar
 
 it doesn't invent any new way to help you
@@ -250,12 +254,14 @@ just make you use the way more easy and concise
 <img src='./images/chpC_37.png'></img>
 
 * you need to deal with unexpected input!
-* in this case `get_int` , `get_string` hold by cs50 solving that.
+* in this case `get_int` ,  `get_string` hold by cs50 solving that.
 
 <img src='./images/chpC_38.png'></img>
 
  `implicit declaration of function error`
+
 * C語言不僅很老，而且還很笨，他能夠辨識你寫的source code，但是只能**從上到下**，反過來寫是不行的，進入main之後找不到 `caugh` ，就會出現 `implicit declaration of function error`
+
 # Mario!
 
 <img src='./images/chpC_39.png'></img>
@@ -287,7 +293,7 @@ just make you use the way more easy and concise
 * lying programming?
 * who is right? grade school math or computers?
 * the computer only can store some digits, so after certian point, you don't know what's going on out there
-* if you only have finite hardware(like memory) - the computer has to decide : `I can count no giher than this value` , `I can store mo more than this many numbers after decimal point`
+* if you only have finite hardware(like memory) - the computer has to decide : `I can count no giher than this value` ,  `I can store mo more than this many numbers after decimal point`
 * and float support `32 bits`
 * double support `64 bits`
 * **computer are indeed not perfect**

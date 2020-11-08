@@ -11,6 +11,7 @@
 <img src='./images/chp3_1.png'></img>
 
 * looking for a number : 7 boxes, each one number in a box. looking for `50`
+
 # Linear Search 
 
 * all the numbers are random
@@ -18,6 +19,7 @@
 <img src='./images/chp3_2.png'></img>
 
 ``` 
+
 pseudocode(english like)
 for i from 0 to n-1
   if i'th element is 50
@@ -34,6 +36,7 @@ return false
 * 從中間切，比大小，再從剩下的，從中間再切
 
 ``` 
+
 pseudocode(english like)
 if no items
   return false
@@ -111,6 +114,7 @@ else if > 50  middle item
 * alright, in psudocode
 
 ``` 
+
 Repeat n-1 times(because it is the most times you can do)
 For i from 0 to n-2
   If i'th and i+1'th elements out of order
@@ -141,6 +145,7 @@ Time Complexity O(N^2), Omega(N^2)
 psudocode
 
 ``` 
+
 For i from 0 to n-1
   Find smallest item between i'th item and last item
   swap the smallest item with i'th item
@@ -192,6 +197,7 @@ actually a google joke when you searching recusion
 * psudocode
 
 ``` 
+
 (Stopping condition / Base Case)
 if only one item
   return 

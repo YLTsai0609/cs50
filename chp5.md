@@ -69,6 +69,7 @@ int main(void)
 Everything we're talking avout today will be these three features of C
 
 ``` 
+
 struct -> self-defined data type.
 
 . -> access a property of structure.
@@ -80,6 +81,7 @@ struct -> self-defined data type.
 # Linked-List
 
  `Fix-array`
+
    - drawback 
 
     if you want to extend it. you need to ask for more memory. copy old to the new one. add the new components.
@@ -108,6 +110,7 @@ struct -> self-defined data type.
 struct will take first name as formal name
 last name as nick name
 here we called both of them : `node`
+
 cs50 sandbox!
 
 ### Another idea of linked-list implements
@@ -120,9 +123,13 @@ cs50 sandbox!
 <img src='./images/chp5_17.png'></img>
 
  `(*n).number = 2;`
+
  go to the address. there is a custom dtype. we want the attribute `number`
+
  and it is too ugly to read. There is a syntax sugar `->`
+
  `n->numver = 2`
+
 <img src='./images/chp5_18.png'></img> 
 <img src='./images/chp5_19.png'></img>
 <img src='./images/chp5_20.png'></img>
@@ -141,7 +148,7 @@ cs50 sandbox!
 <img src='./images/chp5_25.png'></img>
 <img src='./images/chp5_26.png'></img>
 
-* QAs : n is a pointer(address), `*n` is a node, then we need `n->number` , because you cannot do `n.number`
+* QAs : n is a pointer(address),  `*n` is a node, then we need `n->number` , because you cannot do `n.number`
 * 5 volunteers to demonstrate the linked-list
 
 start 51:56 - 57:21
@@ -206,6 +213,7 @@ Actually we can think about it in two dimension!
 <img src='./images/chp5_35.png'></img>
 
  `0 ~ 25 switch to A-Z`
+
 <img src='./images/chp5_36.png'></img>
 <img src='./images/chp5_37.png'></img>
 
@@ -227,6 +235,7 @@ and the `A-Z` stuff here we called a hash function.
 get an input and decide which bucket it should be put in.
 
 in our case now. our hash function is `first letter`
+
   + simple
   + efficient
   + small array we use
@@ -252,7 +261,7 @@ Corner case? - all the first letter of the name is `H` , worst case is $O(N)$
 
 <img src='./images/chp5_44.png'></img>
 
-* what is an evolution of this idea? - three letters, unfortunately, `26x26x26` might be too large
+* what is an evolution of this idea? - three letters, unfortunately,  `26x26x26` might be too large
 * but still, if we looking at the corner case. worst case still $O(N)$
 * if we need, we can design some magically hash function to keep the uniqueness all the time. 
 * In real world computer science. like `Python` . It will deal with it in the background.
@@ -269,14 +278,14 @@ Corner case? - all the first letter of the name is `H` , worst case is $O(N)$
 <img src='./images/chp5_47.png'></img>
 
 * end at `d`
-* if we store two name `Hagrid` , `Harry` in  the trie structure. it will like that
+* if we store two name `Hagrid` ,  `Harry` in  the trie structure. it will like that
 * the sharing letter will be that same in the array.
 
 <img src='./images/chp5_48.png'></img>
 <img src='./images/chp5_49.png'></img>
 <img src='./images/chp5_50.png'></img>
 
-* tree above is stroing `Hagrid` , `Harry` and `Hermione`
+* tree above is stroing `Hagrid` ,  `Harry` and `Hermione`
 * searching - $O(1)$ actially, not average. there is a upper bound of the length of names.
 * the memory - space complexity. suppose we have $N$ names, max lenth of names is $k$
 * we will use 26 x $k$  x $N$ array space.

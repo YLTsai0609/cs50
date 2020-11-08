@@ -86,15 +86,19 @@ DELETE
 * IMDB provide dataset as `TSV` file(Tab-Separated Values) - they decide use tab instead of comma to seperate the file
 
 IMDB : `https://www.imdb.com/`
+
 IMDB interfaces : `https://www.imdb.com/interfaces/`
+
 `title.basics.tsv.gz` : we download this dataset and using `vim` and `sqlite` to get some juice in the datasets.
 IMDB data files : `https://datasets.imdbws.com/`
+
 * you can use click to download or copy the link using wget
 * `gunzip xxxxxxx.gz`
 
 ### data wranging using python...
 
 ``` 
+
 (py_37_ds) YuLong@wangyuxuandeAir:~/Desktop/Working_Area/cs50/data$ wc -l title.basics.tsv
 7084214 title.basics.tsv
 
@@ -105,6 +109,7 @@ IMDB data files : `https://datasets.imdbws.com/`
 2. chop tv_shows only using python(可以設定read_csv - delimiter='\t')，csv module裡面也有
 
 3. using `SQL` wrapper in `python`
+
 <img src='./images/sql_9.png'></img>
 
 * `VALUES(?, ?, ?, ?)` INSERT query, the placeholder will eat the rest parmas in the following arguments. Basically same thing like `%s` in C.
@@ -112,6 +117,7 @@ IMDB data files : `https://datasets.imdbws.com/`
 * converting data using python, then using sqlite3
 
 ``` 
+
 (py_37_ds) YuLong@wangyuxuandeAir:~/Desktop/Working_Area/C_101/chp7/src7$ sqlite3 shows3.db
 SQLite version 3.32.3 2020-06-18 14:00:33
 Enter ".help" for usage hints.
@@ -123,6 +129,7 @@ SELECT * FROM shows
 SELECT COUNT(*) FROM  shows
 
 ``` 
+
 sqlite> SELECT COUNT(*) FROM shows;
 153331
 
@@ -155,6 +162,7 @@ DB Brower for mac
 * Nested Query - just follow your analytics logic like
 
 ``` 
+
 SELECT * FROM shows WHERE id IN(
   SELECT show_id FROM stars WHERE person_id = (
     SELECT id FRMO people WHERE name = "ABC"
@@ -165,6 +173,7 @@ SELECT * FROM shows WHERE id IN(
 * you will check the id of abc, and konwing what shows he take, finally the all shoes information of a sepeicfic chracter "ABC"
 
 ``` 
+
 SELECT title
 FROM people JOIN stars ON people.Id = stats.person_id JOIN shoes ON syars.show_id = shows.id
 WHERE name = "ABC"
@@ -195,6 +204,7 @@ not a binary tree, a node a splits one, two, or more than 3 child nodes. the tre
 * also , you can create your own index column.
 
 ``` 
+
 CREATE INDEX person_index ON stars(person_id);
 ```
 
@@ -204,6 +214,7 @@ CREATE INDEX person_index ON stars(person_id);
 * let's create more
 
 ``` 
+
 CREATE INDEX show_index ON stars (show_id);
 CREATE INDEX name_index ON people (name);
 ```
@@ -213,6 +224,7 @@ CREATE INDEX name_index ON people (name);
 * run the same query!
 
 ``` 
+
 SELECT title
 FROM people JOIN stars ON people.Id = stats.person_id JOIN shoes ON syars.show_id = shows.id
 WHERE name = "ABC"
@@ -250,6 +262,8 @@ this is why google, facebook, microsoft, who have very large data. they will not
 * [DB Browser for SQLite](https://www.minwt.com/website/server/21758.html)
 * [[Mysql基本觀念] primary Key / Index / Unique差別](https://miggo.pixnet.net/blog/post/30862194)
 * [用 SELECT ... FOR UPDATE 避免 Race condition](https://blog.xuite.net/vexed/tech/22289223-%E7%94%A8+SELECT+...+FOR+UPDATE+%E9%81%BF%E5%85%8D+Race+condition)
+
+* [pset7 solution](https://www.youtube.com/watch?v=Hble0-Gnu2A)
 
 # Stats
 

@@ -29,6 +29,7 @@
 
 * Black `000000`
 * Red `FF0000`
+
 <img src='./images/chp4_5.png'></img>
 
 * reconsider momory counting
@@ -43,6 +44,7 @@
 # Pointer & adress
 
  `adress.c`
+
 <img src='./images/chp4_8.png'></img>
 
 * techniqually, variable take a spot of memory
@@ -76,6 +78,7 @@
 # String does not exist
 
  `string s = "EMMA"`
+
  
 <img src='./images/chp4_15.png'></img>
 <img src='./images/chp4_16.png'></img>
@@ -109,6 +112,7 @@
 
 * `valgrind ./copy`
 * memory leaking, bad - `help valgrind ./copy`
+
 <img src='./images/chp4_23.png'></img>
 
 * `free()` - to free a memory given address
@@ -120,6 +124,7 @@
 * like:
 
 ``` 
+
 swap a b
 
 tmp = a
@@ -158,12 +163,14 @@ b = tmp
 
 * it is not a best design, if we keep calling malloc, malloc, malloc, and keep calling funcion, function, function, function. it will crash your computer
 * if your function is a recurssion function. it will lead to `stackoverflow`
+
 <img src='./images/chp4_30.png'></img>
 <img src='./images/chp4_31.png'></img>
 <img src='./images/chp4_32.png'></img>
 
 * `heapoverflow` is the other thing. if you keep calling malloc, malloc, malloc, malloc, malloc, malloc, malloc. 
 * `bufferoverflow`
+
 # Pointer to FileIO
 
 <img src='./images/chp4_34.png'></img>
