@@ -175,6 +175,7 @@ pass this part, go to chp9
 # Additional metirials
 
 [IPv6](https://www.ithome.com.tw/tech/92046)
+[TCP/IP, HTTP revisted](http://linux.vbird.org/linux_server/0110network_basic.php#whatisnetwork_osi)
 
 # Stats
 
