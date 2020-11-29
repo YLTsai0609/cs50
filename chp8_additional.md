@@ -6,6 +6,10 @@
 
 [mqtt wiki](https://zh.wikipedia.org/wiki/MQTT)
 
+[dns wiki](https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F)
+
+[isp wiki](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E6%9C%8D%E5%8A%A1%E4%BE%9B%E5%BA%94%E5%95%86)
+
 # Outline
 
 * OSI 七層協定
@@ -19,7 +23,7 @@
 * Socket pair 
 * TCP的三向交握
 * UDP
-* 上網? DNS系統
+* DNS and ISP
 * 那些應用層協定們
 * http
 * mqtt
@@ -142,12 +146,16 @@ TCP 封包確實是比較可靠的，因為通過三向交握嘛！不過，也�
 
 另外，很多的軟體其實是同時提供 TCP 與 UDP 的傳輸協定的，舉例來說，查詢主機名稱的 DNS 服務就同時提供了 UDP/TCP 協定。由於 UDP 較為快速，所以我們 client 端可以先使用 UDP 來與伺服器連線。 但是當使用 UDP 連線卻還是無法取得正確的資料時，便轉換為較為可靠的 TCP 傳輸協定來進行資料的傳輸囉。 這樣可以同時兼顧快速與可靠的傳輸說！
 
-# 上網? DNS Server
+# DNS and ISP
 
 為啥你不是用IP位置+port上網?
 其實你是，只是有個系統把IP + port的數字換掉了，這個系統稱作Domain Name System(DNS)具體來說如下 ：
 
 像鳥哥我常常會連到奇摩雅虎的 WWW 網站去看最新的新聞，那麼我一定需要將奇摩雅虎的 WWW 網站的 IP 背下來嗎？天吶， 鳥哥的忘性這麼好，怎麼可能將 IP 背下來？！不過，如果是要將奇摩站的主機名稱背下來的話， 那就容易的多了！不就是 http://tw.yahoo.com 嗎？而既然電腦主機只認識 IP 而已， 因此當我在瀏覽器上面輸入了『http://tw.yahoo.com』的時後，我的電腦首先就會藉由向 DNS 主機查詢 tw.yahoo.com 的 IP 後，再將查詢到的 IP 結果回應給我的瀏覽器， 那麼我的瀏覽器就可以藉由該 IP 來連接上主機啦！
+
+DNS在哪? 
+
+只要有一個地方maintain這個ip -> link name 的table就好，不用大家都有，以台灣來說應該會放在中華電信(ISP - 網際網路服務供應商(Internet Service Provider))
 
 # 那些應用層協定們
 
