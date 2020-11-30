@@ -33,7 +33,7 @@
 
 標準通訊協定有7層，稱之為OSI七層協定(Open System Interconnection)，每一層都可以透過程式碼實作
 
-<img src='./images/8_add_1.png'></img>
+<img src='../images/8_add_1.png'></img>
 
 越底層越靠近硬體，越上層越靠近應用服務，IP(Internect Protocol)被定義在第3層(Network Layer)，該層定義了電腦連線的建立、維持、終止、資料封包的傳輸路徑等，這個層級有兩個重要概念，IP以及路由(route)
 
@@ -41,7 +41,7 @@
 
 Gateway / Router ：網關/路由器的功能就是在負責不同網域之間的封包轉遞 (IP Forwarding)，由於路由器具有 IP Forwarding 的功能，並且具有管理路由的能力， 所以可以將來自不同網域之間的封包進行轉遞的功能。此外，你的主機與你主機設定的 Gateway 必定是在同一個網段內喔！
 
-<img src='./images/8_add_5.png'></img>
+<img src='../images/8_add_5.png'></img>
 
 上圖的server A 就是路由，就是轉接站的意思
 
@@ -51,7 +51,7 @@ Gateway / Router ：網關/路由器的功能就是在負責不同網域之間�
 
 OSI七層協定架構非常嚴謹，所以很難寫，開發上會很有困擾，TCP/IP將其簡化為4層
 
-<img src='./images/8_add_2.png'></img>
+<img src='../images/8_add_2.png'></img>
 
 以上可以看過我們熟悉的名詞，IP在網路層，TCP，UDP在傳送層，HTTP, FTP, SSH, SMTP在應用層
 
@@ -83,7 +83,7 @@ Internet就是TCP/IP這個通訊協定的通稱
 
 ## TCP/IP 傳輸層相關封包與資料
 
-<img src='./images/8_add_3.png'></img>
+<img src='../images/8_add_3.png'></img>
 
 真正的data外面還包了header，TCP的header如上
 
@@ -134,7 +134,7 @@ TCP(Three-way handshake) - 俗稱的三次揮手
 
 此時兩個人就確認彼此都可以聽到對方在講啥，這就是可靠連線啦！ ^_^
 
-<img src='./images/8_add_4.png'></img>
+<img src='../images/8_add_4.png'></img>
 
 ## UDP
 
