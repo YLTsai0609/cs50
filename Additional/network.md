@@ -218,3 +218,5 @@ RTSP Request類型
 | GET_PARAMETER |             取得參數          |
 | SET_PARAMETER |             設定參數          |
 | REDIRECT      |             重定向          |
+
+大部分瀏覽器對RTSP支援的程度較差，MJPG才是常見的交換方式

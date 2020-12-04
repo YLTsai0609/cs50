@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 # Ref
 
 [http wiki](https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE)
@@ -175,6 +169,12 @@ Read|GET|get whole bunch of html response
 Create|POST|create infor to the server
 Update|PUT|update infor with existing key in server
 Delete|DELETE|delete information in server
+
+
+
+
+
+
 
 
 
