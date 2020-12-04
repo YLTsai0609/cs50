@@ -6,6 +6,8 @@
 
 [mqtt wiki](https://zh.wikipedia.org/wiki/MQTT)
 
+[websocket wiki](https://zh.wikipedia.org/wiki/WebSocket)
+
 [dns wiki](https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F)
 
 [isp wiki](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E6%9C%8D%E5%8A%A1%E4%BE%9B%E5%BA%94%E5%95%86)
@@ -167,6 +169,18 @@ http是應用層協定，通訊層使用TCP(也就是三項交握的可靠傳輸
 
 和TCP的比較，TCP只確保了可靠連線，要傳什麼可以自己刻，HTTP則有自己的header，通常拿來傳整張網頁，看裡面要放什麼
 
+## WebSocket
+
+允許server向client端推播資料，在WebSocket API中，瀏覽器和伺服器只需要完成一次三向交握，兩者之間就可以建立永續性連接，並進行雙向資料傳輸，和HTTP相比，HTTP每次傳輸都交握一次，若傳輸streamming data，例如影像串流，或其他資料串流，很適合使用WebSocket來進行擴展
+
+大部分瀏覽器都支援該協定，像是Google Chrome, Firfox, Safari, Edge, IE, Opera
+
+1. 控制開銷相較http較低，header較http小很多
+2. 即時性更好，server主動送，延遲明顯更少
+3. 更好的二進位支援，Websocket有定義二進位影格
+4. 可支援擴充，WebSocket定義了擴充，使用者可以擴充協定，實現自己的通訊協定(例如壓縮)
+5. 更好的壓縮，相對於HTTP壓縮，Websocket在適當擴充支援下，可以沿用之前內容的上下文，傳遞類似資料時，可以明顯提高壓縮率||
+
 ## MQTT
 
 [here](https://zh.wikipedia.org/wiki/MQTT)
@@ -174,3 +188,33 @@ http是應用層協定，通訊層使用TCP(也就是三項交握的可靠傳輸
 [home camera](https://www.pyimagesearch.com/2019/04/15/live-video-streaming-over-network-with-opencv-and-imagezmq/)
 
 ## RTSP
+
+[RTSP wiki](https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E4%B8%B2%E6%B5%81%E5%8D%94%E5%AE%9A)
+
+Real Time Streamming Protocol RTSP，是一種網路應用協定，專為娛樂和通信系統使用，以控制串流媒體伺服器
+
+媒體伺服器的客戶端可以發布VCR指令，例如播放，錄製，暫停，來控制伺服器到客戶端 or 客戶端到伺服器端(語音錄音)的媒體流
+
+資料流本身的傳輸不是RTSP的任務，大多數RTSP server 是使用即時傳輸協定(RTP)和即時傳輸控制協定(RTCP)，然而，有一些供應商實現專有的傳輸協定，例如RealNetworks公司的RTSP伺服器軟體是使用RealNetworks自己研發的傳輸協定，即時資料傳輸(RDT)
+
+RTSP vs HTTP
+
+1. RTSP有狀態，HTTP沒有
+2. 都用TCP來保持連線
+3. RTSP的特性，控制訊息會由客戶端發送，少數指令由伺服器端送到客戶端
+
+RTSP Request類型
+
+| Request Type  | Note                  |
+|---------------|-----------------------|
+| OPTIONS       | 問server支援哪些request |
+| DESCRIBE      |            問server會傳什麼過來(資料類型，其他meta info)           |
+| SETUP         |             指定串流傳輸方式          |
+| PLAY          |             播放          |
+| PAUSE         |             暫停          |
+| RECORD        |             紀錄          |
+| ANNOUNCE      |             發布，送資料到server          |
+| TEARDOWN      |             終止發布行為          |
+| GET_PARAMETER |             取得參數          |
+| SET_PARAMETER |             設定參數          |
+| REDIRECT      |             重定向          |
