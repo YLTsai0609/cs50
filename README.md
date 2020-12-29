@@ -1,4 +1,4 @@
-# Why you need cs50
+# Why you need CS50
 
 * 有些面試問題實在難以回答...
   + 你使用python，你覺得python的list怎麼做到什麼型態都能放? e.g. `[1, 'g',50.43, (765, 444), {'a':'value_a'}]`
@@ -12,7 +12,7 @@
   + 時間複雜度/空間複雜度
   + 計算思維(Computational Thinking)
   + 資料結構/演算法(Data Structure, Algorithm)
-  + array, list, hashtable, bubble sort, selection sort, merge sort, tree
+  + array, list, hash table, bubble sort, selection sort, merge sort, tree
   + hash tables, tires, queues, stack
   + compiler, interpreter
   + overflow
