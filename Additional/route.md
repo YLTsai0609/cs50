@@ -87,6 +87,12 @@ network id of host 2 : (192.168.1.66 in binary) && (255.255.255.0 in binary) = 1
 
 # Supernet
 
+pass
+
 # VLSM
 
+pass
+
 # Private IP Address
+
+pass

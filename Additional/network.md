@@ -19,7 +19,6 @@
 * 電腦網路通訊協定 TCP/IP 
 * TCP/IP 鏈結層相關協定
 * TCP/IP 網路層相關封包與資料
-* TCP/IP 傳輸層相關封包與資料
 * 通訊埠口(ports)
 * 特權埠口 (privileged ports)
 * Socket pair 
