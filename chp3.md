@@ -268,26 +268,31 @@ start @ 80
 
 # Stats
 
+session 1
 start 1730
 end 1830
 course 25:00
 factor 2
 
+session 2
 start 0120
 end 0230
 course 48:00
 factor 3
 
+session 3
 start 1730
 end 1815
 course 60
 factor 3
 
+session 4
 start 1800
 end 1830
 course 80
 factor 1.5
 
+session 5
 start 1810
 end 1840
 course 90

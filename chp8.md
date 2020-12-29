@@ -179,16 +179,19 @@ pass this part, go to chp9
 
 # Stats
 
+session 1
 start 1745
 end 1800
 course 30
 factor 0.5
 
+session 2
 start 1730
 end 1830
 course 75
 factor 1.2
 
+session 3
 start 1930
 end 1945
 course 90

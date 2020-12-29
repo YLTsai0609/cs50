@@ -86,7 +86,7 @@
 * support debugger!
 * stopped point - debugger point
 * `run debug50 buggy2`
-* `help50` ,  `debug50` ,  `check50` ,  `style50`
+* `help50` ,   `debug50` ,   `check50` ,   `style50`
 * talk to the duck - [rubber duck debugging](https://zh.wikipedia.org/wiki/%E5%B0%8F%E9%BB%84%E9%B8%AD%E8%B0%83%E8%AF%95%E6%B3%95)
 
 <img src='./images/chp2_17.png'></img>
@@ -177,19 +177,19 @@ QAs :
 <img src='./images/chp2_32.png'></img>
 
 * two argument, first is integer, second is an array of string.
-* first is `the counts of argument` - just like `numbers of scores` ,  `average score array of integer`
+* first is `the counts of argument` - just like `numbers of scores` ,   `average score array of integer`
 * we can implement feature like what clang do
-* `help50` ,  `style50` ,  `...50` implement like that!
+* `help50` ,   `style50` ,   `...50` implement like that!
 
 <img src='./images/chp2_33.png'></img>
 
-* now we can tell,  `void` means no command line argument
+* now we can tell,   `void` means no command line argument
 
 <img src='./images/chp2_34.png'></img>
 
 * and what is the return value of `main` function?
   + by default, main return `0` - means all well.
-  + and `main` can return non-zero values(like,  `1` ,  `2000000` ,  `-300000` ) - if you check your mac carefully, sometimes it shout out something something `-42` ,  `-3` , blablabla - it is a number which human decide the program to return, we called it `Error code`
+  + and `main` can return non-zero values(like,   `1` ,   `2000000` ,   `-300000` ) - if you check your mac carefully, sometimes it shout out something something `-42` ,   `-3` , blablabla - it is a number which human decide the program to return, we called it `Error code`
 
 QAs:
 
@@ -203,8 +203,6 @@ QAs:
 * output is something we cant understand
 * we called it `encrypted` so to speak.
 
- `so to speak 似乎 好像 彷彿 - 也表示說話的人意見顯得不那麼肯定`
-
  
 <img src='./images/chp2_36.png'></img>
 <img src='./images/chp2_37.png'></img> 
@@ -216,28 +214,33 @@ QAs:
 
 * they should use a key to `encrypted` and `decrypted`
 
-# Stats
+# Learning log
 
+session 1
 start 1730
 end 1830
 course 26:00
 factor 2
 
+session 2
 start 1730
 end 1830
 course 54.38
 factor 2
 
+session 3
 start 1715
 end 1830
 course 80:00
 factor 2.8
 
+session 4
 start 1220
 end 12:55 
 course 95
 factor 3.6
 
+session 5
 start 1415
 end 1445
 course 107

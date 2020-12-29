@@ -179,26 +179,31 @@ b = tmp
 
 # Stats
 
+session 1
 start 1730
 end 1830
 course 20:00
 factor 3
 
+session 2
 start 1740
 end 1830
 course 40
 factor 3
 
+session 3
 start 2130
 end 2230
 course 60
 factor 3
 
+session 4
 start 0940
 end 1040
 course 95
 factor 2
 
+session 5
 start 1810
 end 1840
 course 100

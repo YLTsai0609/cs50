@@ -148,7 +148,7 @@ cs50 sandbox!
 <img src='./images/chp5_25.png'></img>
 <img src='./images/chp5_26.png'></img>
 
-* QAs : n is a pointer(address),  `*n` is a node, then we need `n->number` , because you cannot do `n.number`
+* QAs : n is a pointer(address),   `*n` is a node, then we need `n->number` , because you cannot do `n.number`
 * 5 volunteers to demonstrate the linked-list
 
 start 51:56 - 57:21
@@ -261,7 +261,7 @@ Corner case? - all the first letter of the name is `H` , worst case is $O(N)$
 
 <img src='./images/chp5_44.png'></img>
 
-* what is an evolution of this idea? - three letters, unfortunately,  `26x26x26` might be too large
+* what is an evolution of this idea? - three letters, unfortunately,   `26x26x26` might be too large
 * but still, if we looking at the corner case. worst case still $O(N)$
 * if we need, we can design some magically hash function to keep the uniqueness all the time. 
 * In real world computer science. like `Python` . It will deal with it in the background.
@@ -278,14 +278,14 @@ Corner case? - all the first letter of the name is `H` , worst case is $O(N)$
 <img src='./images/chp5_47.png'></img>
 
 * end at `d`
-* if we store two name `Hagrid` ,  `Harry` in  the trie structure. it will like that
+* if we store two name `Hagrid` ,   `Harry` in  the trie structure. it will like that
 * the sharing letter will be that same in the array.
 
 <img src='./images/chp5_48.png'></img>
 <img src='./images/chp5_49.png'></img>
 <img src='./images/chp5_50.png'></img>
 
-* tree above is stroing `Hagrid` ,  `Harry` and `Hermione`
+* tree above is stroing `Hagrid` ,   `Harry` and `Hermione`
 * searching - $O(1)$ actially, not average. there is a upper bound of the length of names.
 * the memory - space complexity. suppose we have $N$ names, max lenth of names is $k$
 * we will use 26 x $k$  x $N$ array space.
@@ -336,31 +336,37 @@ Corner case? - all the first letter of the name is `H` , worst case is $O(N)$
 
 # Stats
 
+session 1
 start 1745
 end 1845
 course 30
 factor 2
 
+session 2
 start 1810
 end 1830
 course 40
 factor 2
 
+session 3
 start 1730
 end 1830
 course 60
 factor 2
 
+session 4
 start 1800
 end 1830
 course 70
 factor 3
 
+session 5
 start 0010
 end 0050
 course 80
 factor 4
 
+session 6
 start 1600
 end 1700
 course 90

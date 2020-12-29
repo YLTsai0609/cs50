@@ -26,7 +26,7 @@
 * `printf` - print in format
 * using double quote to pack your string
 * when you finish your thought, add `;`
-* then,  `printf("hello, world");`
+* then,   `printf("hello, world");`
 
 <img src='./images/chpC_4.png'></img>
 
@@ -98,7 +98,7 @@ ask -> get_string
 * C is old school, you need to tell it how type you want to store
 * equal sign in computer science is typically a movement from right to left means assignment
 * how can I concat string? - placeholder
-* placeholder `%` ,  `%s` for given placeholder as a string
+* placeholder `%` ,   `%s` for given placeholder as a string
 
 ``` C
 string answer = get_string("enter your name\n");
@@ -157,7 +157,7 @@ no-unused-parameter -Wno-unused-variable -Wshadow    string.c
 
 * all the output command is automatically generated for you, when you tell the computer, make my program
 * and a program **make** will figure out what parameters we need then do the compiling!
-* same thing,  `make hello` also worked!
+* same thing,   `make hello` also worked!
 
 QAs:
 
@@ -293,7 +293,7 @@ just make you use the way more easy and concise
 * lying programming?
 * who is right? grade school math or computers?
 * the computer only can store some digits, so after certian point, you don't know what's going on out there
-* if you only have finite hardware(like memory) - the computer has to decide : `I can count no giher than this value` ,  `I can store mo more than this many numbers after decimal point`
+* if you only have finite hardware(like memory) - the computer has to decide : `I can count no giher than this value` ,   `I can store mo more than this many numbers after decimal point`
 * and float support `32 bits`
 * double support `64 bits`
 * **computer are indeed not perfect**
@@ -320,28 +320,33 @@ suppose you have only 3 digits
 `figlet` - acsii art!
 `say` - say the word!
 
-# Stats
+# Learing log
 
+session 1
 start 0920
 end 2220
 course 30:00
 factor 4
 
+session 2
 start 01:30
 end 02:20
 course 15.05
 factor 4
 
+session 3
 start 1730
 end 1830
 course 15.05
 factor 4
 
+session 4
 start 1245
 end 0134
 course 25
 factor 1.8
 
+session 5
 start 1700
 end 1830
 factor 2

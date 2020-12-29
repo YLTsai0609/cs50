@@ -185,9 +185,9 @@ WHERE name = "ABC"
 
 # Key and Index
 
-| name        | explaination               | title |
+| name        | explaination               | note |
 |-------------|----------------------------|-------|
-| Primary Key | make you column row unique | conte |
+| Primary Key | make you column row unique |  |
 Foreign key|same id appears in some other table(like person_id, show_id, they are they key to be joined)||
 Unique|||
 Index|make searching more effiency||
@@ -267,16 +267,19 @@ this is why google, facebook, microsoft, who have very large data. they will not
 
 # Stats
 
+session 1
 start 1745
 end 1800
 course 30
 factor 0.5
 
+session 2
 start 1730
 end 1830
 course 75
 factor 1.2
 
+session 3
 start 1930
 end 1945
 course 90

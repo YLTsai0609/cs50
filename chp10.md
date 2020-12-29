@@ -63,16 +63,19 @@ game development - Lua, super mario brothers(two dimensional side scrolling game
 
 # Stats
 
+session 1
 start 1800
 end 1830
 course 23:07
 factor 1
 
+session 2
 start 1730
 end 1830
 course 75
 factor 1.2
 
+session 3
 start 1930
 end 1945
 course 90
