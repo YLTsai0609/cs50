@@ -86,7 +86,7 @@ Password: (enter password)
 <img src='../images/ssh_5.png'></img> 
 
 1. Client將自己的公鑰存放到Server上，並追加在authorized_keys中(authorized_key)不是資料夾，而是文字檔，注意Client端是透過key generator產生自己client的公私鑰，並且手動複製到server端，ssh建立連接的過程沒有公鑰的操作
-2. Server端收到client端的連接請求，並在authorized_keys匹配到client的公鑰pubKey，並生成隨機數R，用client的公鑰對隨機數加密得到public(R，將加密訊賢傳給client
+2. Server端收到client端的連接請求，並在authorized_keys匹配到client的公鑰pubKey，並生成隨機數R，用client的公鑰對隨機數加密得到public(R)，將加密訊賢傳給client
 3. client端透過私鑰解密的到隨機數R，再透過本次會話的SessionKey利用MD5生成摘要Digest1，發送給Server
 4. Server 端會也會對 R 和 SessionKey 利用同樣摘要算法生成 Digest2。
 5. Server 端會最後比較 Digest1 和 Digest2 是否相同，完成認證過程。
@@ -105,9 +105,11 @@ Password: (enter password)
 
 需要注意的一點是，一台主機可能既是client也是server，所以會同時擁有authorized_keys和known_hosts
 
-### ssh補充
+### ssh config and command line
 
-pass
+1. [command line] `-v` verbose mode : 可以窺探在連線時發生什麼事，e.g. debug使用，了解為什麼連不上去
+2. [command line] `-i` identify file : 使用哪一把私鑰進行加密，預設會找 `~/.ssh/id_dsa`,    `~/.ssh/id_ecdsa`,    `~/.ssh/id_ed25519` `~/.ssh/id_rsa.`，如果都沒有就會報錯，或是要輸入 -i private_key_name，也可以在ssh config中加入
+3. [config] ForwardAgent : 若跳板到遠端機器，又要使用其他需要鑰匙的服務，本地端機器和遠端機器都上傳鑰匙是一件很麻煩的事情，ForwardAgent設定成yes，就只會找登入的那台機器的鑰匙，非常方便，需再登入端輸入`ssh-add`，將自己的鑰匙包加入環境變數
 
 # Reference
 
