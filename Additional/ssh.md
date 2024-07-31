@@ -105,6 +105,88 @@ Password: (enter password)
 
 需要注意的一點是，一台主機可能既是client也是server，所以會同時擁有authorized_keys和known_hosts
 
+### 多台工作站之間共享 ssh 私鑰
+
+1. 可以一把公鑰到處放，可以到處開門解密，例如 github/gitlab/xxxxxx
+2. 換機器或遠端登入，或者進入容器時，如果私鑰帶著會更方便，不需要一直設定私鑰
+
+是的，可以利用 SSH agent forwarding 或 SSH keychain 等技術，讓不同的機器在不直接複製私鑰的情況下，仍然能夠使用同一把私鑰來進行 SSH 認證。這樣做可以提高安全性，因為私鑰始終保持在本地機器，不會直接傳輸到其他機器上。
+
+### 方法一：SSH Agent Forwarding
+
+SSH agent forwarding 可以讓你通過 SSH 登錄到另一台機器時，仍然使用本地機器上的私鑰來進行 SSH 認證。
+
+#### 步驟：
+
+1. **啟動 SSH Agent**（本地機器）：
+
+   在本地機器上啟動 SSH agent，並添加私鑰：
+
+   ```bash
+   eval "$(ssh-agent -s)"
+   ssh-add ~/.ssh/id_rsa
+   ```
+
+使用 ssh 登錄遠端機器時，使用 -A 參數來啟用 agent forwarding
+
+```bash
+ssh -A user@remote_host
+```
+
+這樣，在遠端機器上執行的任何 SSH 命令（如 git clone）都會自動使用本地機器的私鑰，而不需要將私鑰複製到遠端機器。
+
+3.	測試連接：
+在遠端機器上，使用 SSH 命令來測試是否可以通過 agent forwarding 成功認證：
+
+```bash
+ssh -T git@github.com
+ssh -T git@gitlab.com
+```
+
+如果成功，說明 agent forwarding 已經正確配置。
+
+### 方法二：SSH Keychain
+
+SSH keychain 是一個用來管理 SSH agent 的工具，允許你在不同的終端會話中共享 SSH agent，而不必在每個會話中重新加載私鑰。
+
+步驟：
+
+	1.	安裝 SSH Keychain（本地機器）：
+在本地機器上安裝 SSH keychain：
+	•	對於 Ubuntu/Debian 系統：
+
+`sudo apt-get install keychain`
+
+	•	對於 macOS 系統：
+
+`brew install keychain`
+
+	2.	配置 SSH Keychain（本地機器）：
+在你的 shell 配置文件（如 ~/.bashrc 或 ~/.zshrc）中添加以下內容：
+
+eval `keychain --eval --agents ssh id_rsa`
+
+這會啟動 SSH agent 並自動加載你的私鑰 id_rsa。
+
+	3.	啟用 SSH Keychain：
+加載配置文件來啟動 SSH keychain：
+
+`source ~/.bashrc`
+
+4.	測試：
+開啟新的終端會話，檢查是否已經成功加載 SSH keychain：
+
+`ssh-add -l`
+
+如果看到你的私鑰列表，說明 SSH keychain 已經配置成功。你可以在不同的終端會話中使用同一個 SSH agent，而不需要每次都手動加載私鑰。
+
+優點與注意事項：
+
+	•	安全性：這些方法都避免了直接傳輸私鑰，減少了私鑰洩露的風險。
+	•	便捷性：SSH agent forwarding 對於短期或臨時的操作很有用，而 SSH keychain 更適合在同一台機器上持續進行操作。
+
+使用這些技術，你可以在不直接傳輸私鑰的情況下，實現多機器的 SSH 認證。
+
 ### ssh config and command line
 
 1. [command line] `-v` verbose mode : 可以窺探在連線時發生什麼事，e.g. debug使用，了解為什麼連不上去
